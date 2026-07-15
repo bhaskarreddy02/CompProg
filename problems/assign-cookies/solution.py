@@ -3,9 +3,15 @@ class Solution:
         sum=0
         g.sort()
         s.sort()
-        for i in range(min(len(g),len(s))):
-            if g[i]<=s[i]:
+        i=j=0
+        while i< len(g) and j<len(s):
+            if g[i]<=s[j]:
                 sum=sum+1
+                i+=1
+                j+=1
+            else:
+                j+=1    
+
 
         return sum        
 
