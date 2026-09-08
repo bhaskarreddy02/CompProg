@@ -1,6 +1,4 @@
 class Solution:
     def countCommas(self, n: int) -> int:
-        if(n>999 and n<=10**6):
-            return n-999
-        else:
-            return 0
+        return (n > 999) * (n - 999)
+        ##so if n>999 returns 1 and multiplies with n-999 else returns 0 and multiplies with the same resu;ts zero eff
